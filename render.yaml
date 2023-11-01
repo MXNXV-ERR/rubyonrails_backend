@@ -1,0 +1,14 @@
+services:
+  - name: web
+    plan: web
+    runtime: ruby
+    envVars:
+      - key: RAILS_MASTER_KEY
+        sync: false
+
+databases:
+  - name: mysql
+    plan: mysql
+    env:
+      RAILS_ENV: production
+      DATABASE_URL: <%= spec("mysql").url %>

@@ -26,5 +26,12 @@ test:
   #database: storage/test.sqlite3
 
 production:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
+  database: testtt
+  pool: 5
+  username: avnadmin
+  password: AVNS__5mvteEd1QqMZlGAoS9
+  host: mysql-26b3074c-angbymtg-8294.a.aivencloud.com
+  port: 26098
   #database: storage/production.sqlite3
